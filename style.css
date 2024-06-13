@@ -47,27 +47,6 @@ header h1{
     transition: 0.3s ease-in-out;
 }
 
-
-
-.sign-up{
-    border: none;
-    background-color: #c0bfac;
-}
-
-.sign-up:active{
-    background-color: #757469;
-}
-
-.log-in{
-    background-color: #a9a9b8;
-    border: 1px solid #c0bfac;
-    color: #faf8f3;
-}
-
-.log-in:active{
-    background-color: #666670;
-}
-
 main{
     position: relative;
     display: flex;
@@ -129,6 +108,10 @@ footer a:hover{
     text-decoration: underline;
 }
 
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.264);
+}
+
 .modal{
     position: fixed;
     z-index: 1;
@@ -136,7 +119,8 @@ footer a:hover{
     left: 50%;
     transform: translate(-50%, 50%);
     width: 300px;
-    visibility: hidden;
+    border:none;
+    background-color:rgba(0, 0, 0, 0);
 }
 
 .add-book-form{
@@ -157,7 +141,7 @@ footer a:hover{
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .add-book-form input::placeholder{

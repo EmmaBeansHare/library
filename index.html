@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="notModal">
     <header>
         <h1>Library</h1>
-        <div class="fake-buttons">
-            <button class="sign-up">sign up</button>
-            <button class="log-in">log in</button>
-        </div>
     </header>
     <main>
         <button class="book-button" id="bookBtn">+ Add Book</button>
@@ -21,8 +19,10 @@
     <footer>
         <p>Made by <a href="https://github.com/EmmaBeansHare">EmmaBeansHare</a></p>
     </footer>
-    <div id="formModal" class="modal">
-        <form class="add-book-form" id="addBookForm">
+    </div>
+    <div class="modal-backdrop"></div>
+    <dialog id="formModal" class="modal">
+        <form method="dialog" class="add-book-form" id="addBookForm">
             <legend>Add a new book</legend>
             <input type="text" 
             id="titleInput" 
@@ -34,11 +34,11 @@
             id="pagesInput"
             placeholder="Pages">
             <label class="read-status" for="readStatus">Have you read the book?
-                <input id="readStatus" type="checkbox" checked="checked">
+                <input id="readStatus" type="checkbox">
                 <span class="checkbox"></span>
             </label>
             <button id="submitBtn" type="submit">Submit</button>
         </form>
-    </div>
+    </dialog>
 </body>
 </html>
